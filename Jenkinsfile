@@ -1,13 +1,13 @@
 pipeline {
-
-
-     def HOST_DIR = "/root/.m2"
-     def CONTAINER_DIR = "/root/.m2"
+	environment {
+		HOST_DIR = '/root/.m2'
+		CONTAINER_DIR = '/root/.m2'
+	}
 
     agent {
         docker {
             image 'node:14-alpine'
-            args "-v ${HOST_DIR}:${CONTAINER_DIR}"
+            args "-v ${env.HOST_DIR}:${env.CONTAINER_DIR}"
          }
      }
 
