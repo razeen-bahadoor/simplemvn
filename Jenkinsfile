@@ -1,8 +1,8 @@
 pipeline {
 
 
-     def HOST_DIR = '/root/.m2'
-     def CONTAINER_DIR = '/root/.m2'
+     def HOST_DIR = "/root/.m2"
+     def CONTAINER_DIR = "/root/.m2"
 
     agent {
         docker {
