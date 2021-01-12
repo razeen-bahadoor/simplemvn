@@ -1,16 +1,16 @@
 pipeline {
 	environment {
-		HOST_DIR = ''
-		CONTAINER_DIR = ''
-		BIND_MOUNT_FLAG = '-v'
+		HOST_DIR = '/root/.m2'
+		CONTAINER_DIR = '/root/.m2'
 	}
 
-	agent {
-		docker{
-			image: 'maven:3-alpine'
-			args "${BIND_MOUNT_FLAG} ${HOST_DIR}:${CONTAINER_DIR}"
-		}
-	}
+    agent {
+        docker {
+            image 'node:14-alpine'
+            args "-v ${HOST_DIR}:${CONTAINER_DIR}"
+         }
+     }
+
 
 	stages {
 
