@@ -1,7 +1,7 @@
 pipeline {
 	environment {
-		HOST_DIR = '/root/.m2'
-		CONTAINER_DIR = '/root/.m2'
+		HOST_DIR = '~/.m2'
+		CONTAINER_DIR = '~/.m2'
 	}
 
     agent {
