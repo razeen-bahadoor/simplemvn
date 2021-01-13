@@ -7,7 +7,7 @@ pipeline {
     agent {
         docker {
             image 'node:14-alpine'
-            args "-v ~/.m2:~/.m2"
+            args "-v /.m2:/.m2"
          }
      }
 
